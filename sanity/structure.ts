@@ -127,5 +127,54 @@ export const structure: StructureResolver = (S) =>
 
    S.divider(),
 
+      // Contact Form Submissions
+      S.listItem()
+        .title("Contact Form Submissions")
+        .icon(InlineIcon)
+        .child(
+          S.list()
+            .title("Contact Form Submissions")
+            .items([
+              S.listItem()
+                .title("New Submissions")
+                .icon(InlineIcon)
+                .child(
+                  S.documentTypeList("contact")
+                    .title("New Submissions")
+                    .filter('_type == "contact" && status == "new"'),
+                ),
+
+              S.listItem()
+                .title("Archived")
+                .icon(InlineIcon)
+                .child(
+                  S.documentTypeList("contact")
+                    .title("Archived Submissions")
+                    .filter('_type == "contact" && status == "archived"'),
+                ),
+            ]),
+        ),
+
+      S.divider(),
+      // Navigation
+      S.listItem()
+        .title("Navigation Links")
+        .icon(DocumentsIcon)
+        .schemaType("navigation")
+        .child(S.documentTypeList("navigation").title("Navigation Links")),
+
+      S.divider(),
+
+      // Site Settings (Singleton)
+      S.listItem()
+        .title("Site Settings")
+        .icon(CogIcon)
+        .child(
+          S.document()
+            .schemaType("siteSettings")
+            .documentId("singleton-siteSettings"),
+        ),
+
+
 
     ])
