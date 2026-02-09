@@ -30,102 +30,104 @@ export const structure: StructureResolver = (S) =>
         ),
 
       S.divider(),
-       // Portfolio Section
-       S.listItem()
-       .title("Portfolio")
-       .icon(RocketIcon)
-       .child(
-         S.list()
-           .title("Portfolio Content")
-           .items([
-             S.listItem()
-               .title("Projects")
-               .icon(ProjectsIcon)
-               .schemaType("project")
-               .child(S.documentTypeList("project").title("Projects")),
 
-             S.listItem()
-               .title("Skills")
-               .icon(AsteriskIcon)
-               .schemaType("skill")
-               .child(S.documentTypeList("skill").title("Skills")),
+      // Portfolio Section
+      S.listItem()
+        .title("Portfolio")
+        .icon(RocketIcon)
+        .child(
+          S.list()
+            .title("Portfolio Content")
+            .items([
+              S.listItem()
+                .title("Projects")
+                .icon(ProjectsIcon)
+                .schemaType("project")
+                .child(S.documentTypeList("project").title("Projects")),
 
-             S.listItem()
-               .title("Services")
-               .icon(TagIcon)
-               .schemaType("service")
-               .child(S.documentTypeList("service").title("Services")),
-           ]),
-       ),
+              S.listItem()
+                .title("Skills")
+                .icon(AsteriskIcon)
+                .schemaType("skill")
+                .child(S.documentTypeList("skill").title("Skills")),
 
-     S.divider(),
-     // Professional Background
-     S.listItem()
-     .title("Professional Background")
-     .icon(CaseIcon)
-     .child(
-       S.list()
-         .title("Professional Background")
-         .items([
-           S.listItem()
-             .title("Work Experience")
-             .icon(CaseIcon)
-             .schemaType("experience")
-             .child(
-               S.documentTypeList("experience").title("Work Experience"),
-             ),
+              S.listItem()
+                .title("Services")
+                .icon(TagIcon)
+                .schemaType("service")
+                .child(S.documentTypeList("service").title("Services")),
+            ]),
+        ),
 
-           S.listItem()
-             .title("Education")
-             .icon(BookIcon)
-             .schemaType("education")
-             .child(S.documentTypeList("education").title("Education")),
+      S.divider(),
 
-           S.listItem()
-             .title("Certifications")
-             .icon(DocumentIcon)
-             .schemaType("certification")
-             .child(
-               S.documentTypeList("certification").title("Certifications"),
-             ),
+      // Professional Background
+      S.listItem()
+        .title("Professional Background")
+        .icon(CaseIcon)
+        .child(
+          S.list()
+            .title("Professional Background")
+            .items([
+              S.listItem()
+                .title("Work Experience")
+                .icon(CaseIcon)
+                .schemaType("experience")
+                .child(
+                  S.documentTypeList("experience").title("Work Experience"),
+                ),
 
-           S.listItem()
-             .title("Achievements & Awards")
-             .icon(StarIcon)
-             .schemaType("achievement")
-             .child(
-               S.documentTypeList("achievement").title(
-                 "Achievements & Awards",
-               ),
-             ),
-         ]),
-     ),
+              S.listItem()
+                .title("Education")
+                .icon(BookIcon)
+                .schemaType("education")
+                .child(S.documentTypeList("education").title("Education")),
 
-   S.divider(),
+              S.listItem()
+                .title("Certifications")
+                .icon(DocumentIcon)
+                .schemaType("certification")
+                .child(
+                  S.documentTypeList("certification").title("Certifications"),
+                ),
 
-   // Content & Community
-   S.listItem()
-     .title("Content & Community")
-     .icon(DocumentsIcon)
-     .child(
-       S.list()
-         .title("Content & Community")
-         .items([
-           S.listItem()
-             .title("Blog Posts")
-             .icon(ComposeIcon)
-             .schemaType("blog")
-             .child(S.documentTypeList("blog").title("Blog Posts")),
+              S.listItem()
+                .title("Achievements & Awards")
+                .icon(StarIcon)
+                .schemaType("achievement")
+                .child(
+                  S.documentTypeList("achievement").title(
+                    "Achievements & Awards",
+                  ),
+                ),
+            ]),
+        ),
 
-           S.listItem()
-             .title("Testimonials")
-             .icon(CommentIcon)
-             .schemaType("testimonial")
-             .child(S.documentTypeList("testimonial").title("Testimonials")),
-         ]),
-     ),
+      S.divider(),
 
-   S.divider(),
+      // Content & Community
+      S.listItem()
+        .title("Content & Community")
+        .icon(DocumentsIcon)
+        .child(
+          S.list()
+            .title("Content & Community")
+            .items([
+              S.listItem()
+                .title("Blog Posts")
+                .icon(ComposeIcon)
+                .schemaType("blog")
+                .child(S.documentTypeList("blog").title("Blog Posts")),
+
+              S.listItem()
+                .title("Testimonials")
+                .icon(CommentIcon)
+                .schemaType("testimonial")
+                .child(S.documentTypeList("testimonial").title("Testimonials")),
+            ]),
+        ),
+
+      S.divider(),
 
       // Contact Form Submissions
       S.listItem()
@@ -156,6 +158,7 @@ export const structure: StructureResolver = (S) =>
         ),
 
       S.divider(),
+
       // Navigation
       S.listItem()
         .title("Navigation Links")
@@ -174,7 +177,4 @@ export const structure: StructureResolver = (S) =>
             .schemaType("siteSettings")
             .documentId("singleton-siteSettings"),
         ),
-
-
-
-    ])
+    ]);
